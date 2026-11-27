@@ -1,6 +1,6 @@
 # text-to-sql
 
-[![Traigent Certified Evaluation](https://img.shields.io/badge/Traigent%20Certified%20Evaluation-self--issued%20%C2%B7%20n%3D200%20%C2%B7%202026--11%20%C2%B7%20exp%202027--02-blue)](CERTIFICATE.md)
+[![Shipped with Evidence](https://img.shields.io/badge/Shipped%20with%20Evidence-n%3D200%20held--out%20%C2%B7%202026--11%20%C2%B7%20exp%202027--02-blue)](EVIDENCE.md)
 
 Text-to-SQL agent for SQLite (Spider), tuned with Traigent and evaluated on 200 held-out questions.
 
@@ -22,7 +22,7 @@ Every paired interval includes 0. Two alternatives scored 174/200 against the ba
 Temperatures are the values requested in the config. Google's documentation says Gemini 3.5 Flash-Lite ignores a custom temperature ([model page](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash-lite)), so for the two flash-lite configs scored on held-out the temperature setting may have had no effect. Full configs: [results/candidates.json](results/candidates.json). Raw per-question outputs: `results/heldout_*.json`.
 Costs are provider-reported tokens times list prices ([agent/model_pricing.json](agent/model_pricing.json)), not billed amounts.
 
-Certificate: [CERTIFICATE.md](CERTIFICATE.md), self-issued and accepted on 2026-11-27. It certifies that the protocol was followed, not that the agent is good on your data.
+Evidence record: [EVIDENCE.md](EVIDENCE.md), self-issued and accepted on 2026-11-27. It attests that the protocol was followed, not that the agent is good on your data.
 
 ## How it was built
 
@@ -66,7 +66,7 @@ scripts/get_spider.sh
 # 2. Mock mode first: offline, no network, no spend, canned model replies
 python run_optimization.py --mock
 python -m unittest tests.test_paid_guard   # spend-guard tests, stub provider, no network
-python scripts/verify_certificate.py          # archived files match certificate.json
+python scripts/verify_evidence.py          # archived files match evidence.json
 python analyze.py baseline best_other cheap_strong next_strongest   # full scorecard from the archived outputs, no model call
 
 # 3. Real run (paid Vertex AI calls; the search was about $3.75)
@@ -111,7 +111,7 @@ Paid mode also sets `TRAIGENT_VENDOR_MAX_RETRIES=0` so the SDK does not retry pr
 - **Power.** With n=200 only a gain of roughly 5 pp or more is detectable, as a rough approximation for this sample size and a baseline near 86%. "No detectable gain" is not "no gain": a true +2 pp would look like this.
 - **Costs are list prices** applied to token counts, not billing.
 - **One benchmark, one seed.** Spider dev may be in the models' training data. The held-out questions come from 19 databases, so they are not fully independent. No multiplicity correction was applied across the 3 comparisons.
-- **Preview model ids.** `gemini-3.1-pro-preview` is a preview id and may change or be retired; the certificate expires early if any listed id is deprecated.
+- **Preview model ids.** `gemini-3.1-pro-preview` is a preview id and may change or be retired; the evidence record expires early if any listed id is deprecated.
 - **Not your data.** This says nothing about your schema or questions; run the harness on your own questions before relying on any configuration.
 - **Self-issued.** No outside party reviewed this. Pre-registration timestamps for this first run are local file times; later runs pre-register by public commit.
 - **Accepted, not audited.** A named person accepted the release; no outside party audited it.
