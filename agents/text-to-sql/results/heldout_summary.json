@@ -1,0 +1,124 @@
+{
+  "baseline": {
+    "correct": 172,
+    "n": 200,
+    "acc": 0.86,
+    "ci": [
+      0.8051,
+      0.9013
+    ],
+    "cost_total": 0.038230200000000006,
+    "cost_per_q": 0.00019115100000000003,
+    "latency_ms_mean": 746.124963760376,
+    "errors": 0,
+    "config": {
+      "model": "vertex_ai/gemini-3.5-flash-lite",
+      "temperature": 0.0,
+      "fewshot_k": 0,
+      "fewshot_selector": "fixed",
+      "generation_path": "direct",
+      "schema_context": "full_ddl_fk",
+      "repair": "off",
+      "output_mode": "sql_only"
+    }
+  },
+  "best_other": {
+    "correct": 174,
+    "n": 200,
+    "acc": 0.87,
+    "ci": [
+      0.8163,
+      0.9097
+    ],
+    "cost_total": 0.22696650000000004,
+    "cost_per_q": 0.0011348325000000003,
+    "latency_ms_mean": 1182.949800491333,
+    "errors": 0,
+    "config": {
+      "model": "vertex_ai/gemini-3.5-flash",
+      "temperature": 0.4,
+      "fewshot_k": 4,
+      "fewshot_selector": "similar",
+      "generation_path": "direct",
+      "schema_context": "full_ddl_fk",
+      "repair": "on",
+      "output_mode": "sql_only"
+    },
+    "wins_vs_base": 8,
+    "losses_vs_base": 6,
+    "diff_vs_base": 0.01,
+    "diff_ci_newcombe": [
+      -0.029669,
+      0.050348
+    ],
+    "mcnemar_p": 0.79052734375,
+    "bonferroni_threshold": 0.0167,
+    "passes_bonferroni": false
+  },
+  "cheap_strong": {
+    "correct": 174,
+    "n": 200,
+    "acc": 0.87,
+    "ci": [
+      0.8163,
+      0.9097
+    ],
+    "cost_total": 0.05121769999999999,
+    "cost_per_q": 0.00025608849999999997,
+    "latency_ms_mean": 810.0023603439331,
+    "errors": 0,
+    "config": {
+      "model": "vertex_ai/gemini-3.5-flash-lite",
+      "temperature": 0.4,
+      "fewshot_k": 2,
+      "fewshot_selector": "fixed",
+      "generation_path": "direct",
+      "schema_context": "full_ddl_fk",
+      "repair": "on",
+      "output_mode": "sql_only"
+    },
+    "wins_vs_base": 4,
+    "losses_vs_base": 2,
+    "diff_vs_base": 0.01,
+    "diff_ci_newcombe": [
+      -0.018518,
+      0.039673
+    ],
+    "mcnemar_p": 0.6875,
+    "bonferroni_threshold": 0.0167,
+    "passes_bonferroni": false
+  },
+  "next_strongest": {
+    "correct": 169,
+    "n": 200,
+    "acc": 0.845,
+    "ci": [
+      0.7884,
+      0.8886
+    ],
+    "cost_total": 0.3168825000000002,
+    "cost_per_q": 0.001584412500000001,
+    "latency_ms_mean": 1460.674751996994,
+    "errors": 0,
+    "config": {
+      "model": "vertex_ai/gemini-3.5-flash",
+      "temperature": 0.2,
+      "fewshot_k": 0,
+      "fewshot_selector": "fixed",
+      "generation_path": "plan_then_sql",
+      "schema_context": "full_ddl_fk",
+      "repair": "on",
+      "output_mode": "allow_prose"
+    },
+    "wins_vs_base": 9,
+    "losses_vs_base": 12,
+    "diff_vs_base": -0.015,
+    "diff_ci_newcombe": [
+      -0.062692,
+      0.032074
+    ],
+    "mcnemar_p": 0.6636238098144531,
+    "bonferroni_threshold": 0.0167,
+    "passes_bonferroni": false
+  }
+}

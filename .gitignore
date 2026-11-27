@@ -1,0 +1,13 @@
+spider_data/
+spider.zip
+data/search.jsonl
+data/heldout.jsonl
+data/fewshot_pool.jsonl
+results-mock/
+results-rerun/
+venv/
+.venv/
+__pycache__/
+.traigent/
+.env
+*.pyc

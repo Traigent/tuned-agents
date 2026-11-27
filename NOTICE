@@ -1,0 +1,8 @@
+Tuned Agents
+
+Code in this repository: MIT License (see LICENSE).
+
+Third-party material is described per agent. Dataset licences, attributions and dependency
+notes are in each agent's NOTICE file:
+
+  agents/text-to-sql/NOTICE   (Spider, CC BY-SA 4.0; Traigent SDK, AGPL-3.0 or commercial)

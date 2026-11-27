@@ -1,0 +1,6 @@
+# Pinned to the versions used for the evaluation, except traigent (see README, "Dependencies").
+traigent==0.33.0
+litellm==1.111.0
+google-cloud-aiplatform==2.10.0
+google-auth==2.63.1
+PyYAML==6.0.4

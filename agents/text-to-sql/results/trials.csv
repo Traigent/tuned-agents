@@ -1,0 +1,26 @@
+trial_id,status,model,temperature,fewshot_k,fewshot_selector,generation_path,schema_context,repair,output_mode,accuracy,cost,latency,timeout_rate,score,error
+trial_1e0f1fc6387f4ec4,completed,vertex_ai/gemini-3.5-flash-lite,0.0,0,fixed,direct,full_ddl_fk,off,sql_only,0.88,0.00019142400000000002,714.2176556587219,0.0,0.88,
+trial_0fd391fe90274d11,completed,vertex_ai/gemini-3.5-flash,0.4,4,fixed,plan_then_sql,none,off,allow_prose,0.52,0.001566435,1729.6261477470398,0.0,0.52,
+trial_330d89135d86464a,completed,vertex_ai/gemini-3.5-flash-lite,0.2,2,similar,direct,full_ddl_fk,on,allow_prose,0.86,0.000245536,734.1722750663757,0.0,0.86,
+trial_1af1a21195c54267,completed,vertex_ai/gemini-3.1-pro-preview,0.2,2,similar,direct,none,on,sql_only,0.78,0.0059156,8895.341560840607,0.0,0.78,
+trial_c223424a5210_rej1,pruned,vertex_ai/gemini-3.5-flash-lite,0.2,0,similar,direct,none,off,allow_prose,,,,,,Structural constraint structural_1 violated
+trial_9ce2b2e95973_rej2,pruned,vertex_ai/gemini-3.5-flash-lite,0.0,4,fixed,plan_then_sql,linked_topk,on,sql_only,,,,,,Structural constraint structural_0 violated
+trial_f2df131e37b64de1,completed,vertex_ai/gemini-3.5-flash-lite,0.4,0,fixed,plan_then_sql,linked_topk,off,allow_prose,0.79,0.00039213200000000006,1040.5549430847168,0.0,0.79,
+trial_426ba1accab4423c,completed,vertex_ai/gemini-3.5-flash-lite,0.4,4,similar,direct,full_ddl_fk,on,allow_prose,0.86,0.000264283,721.9762372970581,0.0,0.86,
+trial_1cf5cb9008b44de9,completed,vertex_ai/gemini-3.1-pro-preview,0.4,2,fixed,plan_then_sql,none,on,allow_prose,0.82,0.005521700000000001,8420.612461566925,0.0,0.82,
+trial_0bbab78d9e9d4366,completed,vertex_ai/gemini-3.1-pro-preview,0.0,2,fixed,direct,none,on,sql_only,0.76,0.006608040000000001,9362.132527828217,0.0,0.76,
+trial_02ba0241c4b24192,completed,vertex_ai/gemini-3.5-flash-lite,0.4,2,fixed,direct,full_ddl_fk,on,sql_only,0.87,0.000254299,742.0348191261292,0.0,0.87,
+trial_deb8a3bc930f47da,completed,vertex_ai/gemini-3.1-pro-preview,0.2,2,fixed,plan_then_sql,linked_topk,off,allow_prose,0.82,0.00364456,5767.899897098541,0.0,0.82,
+trial_edd3f4fd9486_rej3,pruned,vertex_ai/gemini-3.5-flash,0.4,0,similar,plan_then_sql,none,on,sql_only,,,,,,Structural constraint structural_0 violated
+trial_85b71f979216_rej4,pruned,vertex_ai/gemini-3.5-flash,0.4,2,similar,plan_then_sql,full_ddl_fk,off,sql_only,,,,,,Structural constraint structural_0 violated
+trial_ba77ab850e7c_rej5,pruned,vertex_ai/gemini-3.5-flash,0.0,2,similar,plan_then_sql,none,on,sql_only,,,,,,Structural constraint structural_0 violated
+trial_d56b6049da0b40d0,completed,vertex_ai/gemini-3.5-flash,0.2,0,fixed,plan_then_sql,full_ddl_fk,on,allow_prose,0.87,0.001590045,1438.3949184417725,0.0,0.87,
+trial_f2253cf611504292,completed,vertex_ai/gemini-3.5-flash-lite,0.4,4,similar,direct,full_ddl_fk,on,allow_prose,0.86,0.000267808,777.5714039802551,0.0,0.86,
+trial_0389496dd68c47c6,completed,vertex_ai/gemini-3.5-flash-lite,0.4,4,similar,direct,none,off,sql_only,0.42,0.000146614,786.0419154167175,0.0,0.42,
+trial_d1c9cd8d8fe7407e,completed,vertex_ai/gemini-3.5-flash,0.0,4,similar,direct,linked_topk,on,allow_prose,0.84,0.001636455,1493.3737802505493,0.0,0.84,
+trial_016f842a7146_rej6,pruned,vertex_ai/gemini-3.1-pro-preview,0.0,0,similar,direct,full_ddl_fk,on,allow_prose,,,,,,Structural constraint structural_1 violated
+trial_ca73b24690124966,completed,vertex_ai/gemini-3.5-flash,0.4,4,similar,direct,full_ddl_fk,on,sql_only,0.88,0.0011307600000000002,1166.4342093467712,0.0,0.88,
+trial_90f1c8d2e65441c5,completed,vertex_ai/gemini-3.5-flash,0.4,2,similar,plan_then_sql,linked_topk,on,allow_prose,0.84,0.001615365,1488.2616114616394,0.0,0.84,
+trial_9f6fc500300c4d88,completed,vertex_ai/gemini-3.1-pro-preview,0.4,4,similar,direct,none,on,allow_prose,0.81,0.00647412,9406.898319721222,0.0,0.81,
+trial_d737de69cf4e_rej7,pruned,vertex_ai/gemini-3.5-flash-lite,0.4,2,similar,plan_then_sql,none,on,sql_only,,,,,,Structural constraint structural_0 violated
+trial_e0834c934c05_rej8,pruned,vertex_ai/gemini-3.5-flash,0.2,2,similar,plan_then_sql,none,off,sql_only,,,,,,Structural constraint structural_0 violated

@@ -1,0 +1,30 @@
+{
+  "query_budget_usd": 0.02,
+  "best_config_cost_per_query": 0.00019142400000000002,
+  "best_config_within_budget": true,
+  "best_score": null,
+  "best_config": {
+    "model": "vertex_ai/gemini-3.5-flash-lite",
+    "temperature": 0.0,
+    "fewshot_k": 0,
+    "fewshot_selector": "fixed",
+    "generation_path": "direct",
+    "schema_context": "full_ddl_fk",
+    "repair": "off",
+    "output_mode": "sql_only"
+  },
+  "best_config_source": "search_best_trial_NOT_gate_promoted",
+  "promotion_note": null,
+  "n_trials": 25,
+  "n_completed": 17,
+  "n_pruned_invalid_config": 8,
+  "metadata": {
+    "note": "portal/session metadata removed for publication"
+  },
+  "total_spend_usd": 3.746518,
+  "rows_scored": 1700,
+  "unpriced_rows": 0,
+  "cap_hit": false,
+  "mode": "real",
+  "max_trials": 25
+}

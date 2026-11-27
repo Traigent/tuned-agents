@@ -1,0 +1,24 @@
+{
+ "vertex_ai/gemini-3.5-flash-lite": {
+  "input_cost_per_token": 3e-07,
+  "output_cost_per_token": 2.5e-06,
+  "reasoning_effort": "minimal"
+ },
+ "vertex_ai/gemini-3.5-flash": {
+  "input_cost_per_token": 1.5e-06,
+  "output_cost_per_token": 9e-06,
+  "reasoning_effort": "minimal"
+ },
+ "vertex_ai/gemini-3.1-pro-preview": {
+  "input_cost_per_token": 2e-06,
+  "output_cost_per_token": 1.2e-05,
+  "reasoning_effort": "low",
+  "max_tokens_headroom": 1500
+ },
+ "_sources": {
+  "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+  "read": "2026-11-26",
+  "basis": "Standard (pay-as-you-go) list price, global endpoint, input <=200K tokens, USD per 1M tokens: 3.5-flash-lite in $0.30 / out $2.50; 3.5-flash in $1.50 / out $9.00; 3.1-pro-preview in $2.00 / out $12.00. Output price covers response AND reasoning tokens (litellm completion_tokens includes reasoning tokens). Cached-input discount and the non-global 50%-credit promo are NOT applied (conservative).",
+  "thinking": "flash-lite and flash: reasoning_effort=minimal gives 0 reasoning tokens (measured). pro-preview cannot turn thinking off (minimal/disable still think ~150 tokens, measured); lowest working setting is low, with max_tokens_headroom=1500 added so thinking cannot starve the answer."
+ }
+}

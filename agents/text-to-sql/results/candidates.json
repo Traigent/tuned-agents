@@ -1,0 +1,42 @@
+{
+ "baseline": {
+  "model": "vertex_ai/gemini-3.5-flash-lite",
+  "temperature": 0.0,
+  "fewshot_k": 0,
+  "fewshot_selector": "fixed",
+  "generation_path": "direct",
+  "schema_context": "full_ddl_fk",
+  "repair": "off",
+  "output_mode": "sql_only"
+ },
+ "best_other": {
+  "model": "vertex_ai/gemini-3.5-flash",
+  "temperature": 0.4,
+  "fewshot_k": 4,
+  "fewshot_selector": "similar",
+  "generation_path": "direct",
+  "schema_context": "full_ddl_fk",
+  "repair": "on",
+  "output_mode": "sql_only"
+ },
+ "cheap_strong": {
+  "model": "vertex_ai/gemini-3.5-flash-lite",
+  "temperature": 0.4,
+  "fewshot_k": 2,
+  "fewshot_selector": "fixed",
+  "generation_path": "direct",
+  "schema_context": "full_ddl_fk",
+  "repair": "on",
+  "output_mode": "sql_only"
+ },
+ "next_strongest": {
+  "model": "vertex_ai/gemini-3.5-flash",
+  "temperature": 0.2,
+  "fewshot_k": 0,
+  "fewshot_selector": "fixed",
+  "generation_path": "plan_then_sql",
+  "schema_context": "full_ddl_fk",
+  "repair": "on",
+  "output_mode": "allow_prose"
+ }
+}

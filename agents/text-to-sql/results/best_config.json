@@ -1,0 +1,10 @@
+{
+  "model": "vertex_ai/gemini-3.5-flash-lite",
+  "temperature": 0.0,
+  "fewshot_k": 0,
+  "fewshot_selector": "fixed",
+  "generation_path": "direct",
+  "schema_context": "full_ddl_fk",
+  "repair": "off",
+  "output_mode": "sql_only"
+}

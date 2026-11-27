@@ -1,0 +1,17 @@
+text-to-sql (Tuned Agents collection)
+Code in this repository: MIT License (see LICENSE).
+
+Spider dataset
+  This repository does not contain the Spider dataset. It contains example ids (data/question_ids.json)
+  and a few quoted questions and gold queries (some shortened) in README.md as failure examples.
+  Spider: Yu et al., "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain
+  Semantic Parsing and Text-to-SQL Task", EMNLP 2018. https://yale-lily.github.io/spider
+  Spider is licensed CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).
+  The quoted Spider excerpts in this repository, and the split files that scripts/get_spider.sh
+  builds from Spider, remain under CC BY-SA 4.0. The code in this repository is MIT.
+
+Traigent SDK
+  This code depends on the Traigent SDK (traigent on PyPI), which is licensed AGPL-3.0 or under a
+  commercial license. The SDK is installed from PyPI and not included here.
+
+Other dependencies (LiteLLM, Google Cloud client libraries, PyYAML) keep their own licenses.

@@ -1,0 +1,96 @@
+# Text-to-SQL on the public Spider benchmark: which model + prompt recipe is
+# accurate, cheap and fast?  TVL = Traigent's spec language: it declares the
+# tunable variables (tvars), the rules between them (constraints), what to
+# optimize (objectives) and when a winner may be promoted (promotion_policy).
+tvl:
+  module: traigent.demo.text2sql_spider
+tvl_version: "1.0"
+
+# Facts about the environment this study runs in. Numbers here are inputs to
+# the operational (budget) check below; they are not tuned.
+environment:
+  snapshot_id: "2026-11-26T00:00:00Z"
+  context:
+    query_budget_usd: 0.02            # most we are willing to pay per query
+    cheapest_config_est_cost_usd: 0.004   # rough estimate: cheapest model, 4 shots, full schema
+
+# The 100 "search" questions the optimizer scores trials on (Spider dev, seed 20261127).
+# A disjoint held-out file (data/heldout.jsonl) is scored once, after the search.
+evaluation_set:
+  dataset: data/search.jsonl
+  seed: 20261127
+
+tvars:
+  # Which LLM answers (three price tiers, Gemini via Vertex AI).
+  - name: model
+    type: enum[str]
+    domain: ["vertex_ai/gemini-3.5-flash-lite",
+             "vertex_ai/gemini-3.5-flash",
+             "vertex_ai/gemini-3.1-pro-preview"]
+  - name: temperature
+    type: enum[float]
+    domain: [0.0, 0.2, 0.4]
+  # Worked examples in the prompt. Declared as enum[int] (not the strings
+  # "0","2","4"): tvl-lint mis-reads the quoted literal '0' in a constraint as
+  # the integer 0 (python/tvl/lints.py:1885-1891), so the string form fails
+  # tvl-validate/tvl-lint although the SDK loader accepts it. See report.
+  - name: fewshot_k
+    type: enum[int]
+    domain: [0, 2, 4]
+  # fixed = same examples every time; similar = the examples closest to the question.
+  - name: fewshot_selector
+    type: enum[str]
+    domain: ["fixed", "similar"]
+  # direct = write SQL; plan_then_sql = short plan first, then SQL.
+  - name: generation_path
+    type: enum[str]
+    domain: ["direct", "plan_then_sql"]
+  # How much database schema the model sees.
+  - name: schema_context
+    type: enum[str]
+    domain: ["none", "full_ddl_fk", "linked_topk"]
+  # on = if the SQL does not run, ask the model once to fix it using the error.
+  - name: repair
+    type: enum[str]
+    domain: ["off", "on"]
+  # May the reply contain prose around the SQL?
+  - name: output_mode
+    type: enum[str]
+    domain: ["sql_only", "allow_prose"]
+
+constraints:
+  structural:
+    # A plan is prose, so it cannot be combined with "SQL only".
+    - when: generation_path = 'plan_then_sql'
+      then: output_mode = 'allow_prose'
+    # With zero examples there is nothing to select; pin the selector.
+    - when: fewshot_k = 0
+      then: fewshot_selector = 'fixed'
+  derived:
+    # Budget: the per-query budget must cover even the cheapest configuration.
+    - require: env.context.query_budget_usd - env.context.cheapest_config_est_cost_usd >= 0
+
+objectives:
+  - name: accuracy
+    metric_ref: metrics.execution_match_accuracy.v1
+    direction: maximize
+  - name: cost
+    metric_ref: metrics.cost_usd_per_query.v1
+    direction: minimize
+  - name: latency
+    metric_ref: metrics.latency_ms.v1
+    direction: minimize
+
+promotion_policy:
+  dominance: epsilon_pareto
+  alpha: 0.05
+  adjust: BH   # Benjamini-Hochberg correction across the three objectives
+  min_effect:
+    accuracy: 0.02
+    cost: 0.0005
+    latency: 200
+  chance_constraints:
+    # A candidate may be promoted only if its timeout rate is <= 5% at 95% confidence.
+    - name: timeout_rate
+      threshold: 0.05
+      confidence: 0.95

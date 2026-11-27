@@ -1,0 +1,1422 @@
+{
+  "label": "cheap_strong",
+  "config": {
+    "model": "vertex_ai/gemini-3.5-flash-lite",
+    "temperature": 0.4,
+    "fewshot_k": 2,
+    "fewshot_selector": "fixed",
+    "generation_path": "direct",
+    "schema_context": "full_ddl_fk",
+    "repair": "on",
+    "output_mode": "sql_only"
+  },
+  "n": 200,
+  "accuracy": 0.87,
+  "cost_total": 0.05121769999999999,
+  "latency_ms_mean": 810.0023603439331,
+  "timeouts": 0,
+  "errors": 0,
+  "per_example": [
+    {
+      "example_id": "spider-dev-0826",
+      "acc": 1.0,
+      "cost": 0.0002032,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0813",
+      "acc": 1.0,
+      "cost": 0.0002845,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0985",
+      "acc": 1.0,
+      "cost": 0.00035949999999999996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0691",
+      "acc": 1.0,
+      "cost": 0.0001832,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0243",
+      "acc": 1.0,
+      "cost": 0.00022920000000000001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0550",
+      "acc": 0.0,
+      "cost": 0.0005594,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1004",
+      "acc": 1.0,
+      "cost": 0.000148,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0395",
+      "acc": 1.0,
+      "cost": 0.0001716,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0597",
+      "acc": 1.0,
+      "cost": 0.0002217,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0006",
+      "acc": 1.0,
+      "cost": 0.0002164,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0881",
+      "acc": 1.0,
+      "cost": 0.0001735,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0421",
+      "acc": 1.0,
+      "cost": 0.0002823,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0046",
+      "acc": 1.0,
+      "cost": 0.0001616,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0857",
+      "acc": 1.0,
+      "cost": 0.0002802,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0657",
+      "acc": 1.0,
+      "cost": 0.00018889999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0923",
+      "acc": 1.0,
+      "cost": 0.0004274,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0506",
+      "acc": 1.0,
+      "cost": 0.0001756,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0241",
+      "acc": 1.0,
+      "cost": 0.0002264,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0475",
+      "acc": 1.0,
+      "cost": 0.0002632,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1000",
+      "acc": 1.0,
+      "cost": 0.00013429999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0277",
+      "acc": 1.0,
+      "cost": 0.0002867,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0585",
+      "acc": 1.0,
+      "cost": 0.00018769999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0351",
+      "acc": 1.0,
+      "cost": 0.0002281,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0890",
+      "acc": 1.0,
+      "cost": 0.0002772,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0175",
+      "acc": 0.0,
+      "cost": 0.00036700000000000003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0049",
+      "acc": 1.0,
+      "cost": 0.0001684,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0741",
+      "acc": 1.0,
+      "cost": 0.0003409,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0653",
+      "acc": 1.0,
+      "cost": 0.0001494,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0687",
+      "acc": 0.0,
+      "cost": 0.0001786,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0497",
+      "acc": 1.0,
+      "cost": 0.0001949,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0529",
+      "acc": 1.0,
+      "cost": 0.0005532,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0446",
+      "acc": 0.0,
+      "cost": 0.0002785,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0385",
+      "acc": 1.0,
+      "cost": 0.0001494,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0274",
+      "acc": 1.0,
+      "cost": 0.00019910000000000001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0044",
+      "acc": 1.0,
+      "cost": 0.0002317,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0364",
+      "acc": 1.0,
+      "cost": 0.00030429999999999997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0413",
+      "acc": 1.0,
+      "cost": 0.0001813,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0157",
+      "acc": 1.0,
+      "cost": 0.0003215,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0833",
+      "acc": 1.0,
+      "cost": 0.0002297,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0726",
+      "acc": 1.0,
+      "cost": 0.0002756,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0918",
+      "acc": 1.0,
+      "cost": 0.0003398,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0690",
+      "acc": 1.0,
+      "cost": 0.00019509999999999997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0257",
+      "acc": 1.0,
+      "cost": 0.0001898,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0547",
+      "acc": 0.0,
+      "cost": 0.0005673,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1017",
+      "acc": 1.0,
+      "cost": 0.00016329999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0403",
+      "acc": 0.0,
+      "cost": 0.0002825,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0630",
+      "acc": 1.0,
+      "cost": 0.0002167,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0036",
+      "acc": 1.0,
+      "cost": 0.0002789,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0886",
+      "acc": 1.0,
+      "cost": 0.00025279999999999996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0416",
+      "acc": 1.0,
+      "cost": 0.00019690000000000002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0080",
+      "acc": 1.0,
+      "cost": 0.0002418,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0849",
+      "acc": 1.0,
+      "cost": 0.000212,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0669",
+      "acc": 1.0,
+      "cost": 0.00023930000000000002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0945",
+      "acc": 0.0,
+      "cost": 0.00048090000000000003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0493",
+      "acc": 0.0,
+      "cost": 0.0001697,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0180",
+      "acc": 0.0,
+      "cost": 0.0001605,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0466",
+      "acc": 1.0,
+      "cost": 0.000285,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1027",
+      "acc": 1.0,
+      "cost": 0.0001695,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0282",
+      "acc": 1.0,
+      "cost": 0.0002061,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0617",
+      "acc": 1.0,
+      "cost": 0.0002052,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0327",
+      "acc": 1.0,
+      "cost": 0.0002227,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0869",
+      "acc": 1.0,
+      "cost": 0.0001635,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0167",
+      "acc": 1.0,
+      "cost": 0.0003551,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0067",
+      "acc": 1.0,
+      "cost": 0.0001735,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0733",
+      "acc": 1.0,
+      "cost": 0.0002503,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0679",
+      "acc": 1.0,
+      "cost": 0.00015869999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0697",
+      "acc": 1.0,
+      "cost": 0.0002017,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0491",
+      "acc": 1.0,
+      "cost": 0.00018659999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0552",
+      "acc": 1.0,
+      "cost": 0.0005254,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0476",
+      "acc": 1.0,
+      "cost": 0.0002626,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0402",
+      "acc": 1.0,
+      "cost": 0.0002936,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0273",
+      "acc": 1.0,
+      "cost": 0.0001976,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0022",
+      "acc": 1.0,
+      "cost": 0.0002858,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0342",
+      "acc": 1.0,
+      "cost": 0.0003065,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0419",
+      "acc": 1.0,
+      "cost": 0.00026849999999999997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0121",
+      "acc": 0.0,
+      "cost": 0.0002788,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0841",
+      "acc": 1.0,
+      "cost": 0.0002828,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0736",
+      "acc": 1.0,
+      "cost": 0.000335,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0973",
+      "acc": 1.0,
+      "cost": 0.0003665,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0689",
+      "acc": 1.0,
+      "cost": 0.0001807,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0242",
+      "acc": 1.0,
+      "cost": 0.00022579999999999999,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0523",
+      "acc": 1.0,
+      "cost": 0.0004111,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1005",
+      "acc": 1.0,
+      "cost": 0.0001486,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0381",
+      "acc": 1.0,
+      "cost": 0.000146,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0600",
+      "acc": 1.0,
+      "cost": 0.0002052,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0035",
+      "acc": 1.0,
+      "cost": 0.0002777,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0910",
+      "acc": 1.0,
+      "cost": 0.00028149999999999996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0420",
+      "acc": 0.0,
+      "cost": 0.0002987,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0075",
+      "acc": 1.0,
+      "cost": 0.00022439999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0828",
+      "acc": 1.0,
+      "cost": 0.00021470000000000001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0666",
+      "acc": 1.0,
+      "cost": 0.0002356,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0968",
+      "acc": 1.0,
+      "cost": 0.0003398,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0501",
+      "acc": 1.0,
+      "cost": 0.0002161,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0199",
+      "acc": 1.0,
+      "cost": 0.0001636,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0485",
+      "acc": 1.0,
+      "cost": 0.00037850000000000004,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1006",
+      "acc": 1.0,
+      "cost": 0.0001486,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0288",
+      "acc": 1.0,
+      "cost": 0.0002701,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0587",
+      "acc": 1.0,
+      "cost": 0.0001999,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0378",
+      "acc": 1.0,
+      "cost": 0.00029560000000000003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0863",
+      "acc": 1.0,
+      "cost": 0.0001501,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0126",
+      "acc": 1.0,
+      "cost": 0.00022619999999999997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0071",
+      "acc": 1.0,
+      "cost": 0.00018910000000000002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0814",
+      "acc": 1.0,
+      "cost": 0.000265,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0681",
+      "acc": 1.0,
+      "cost": 0.0001525,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0696",
+      "acc": 1.0,
+      "cost": 0.0001938,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0495",
+      "acc": 1.0,
+      "cost": 0.0001672,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0527",
+      "acc": 1.0,
+      "cost": 0.00041610000000000003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0439",
+      "acc": 0.0,
+      "cost": 0.000237,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0387",
+      "acc": 0.0,
+      "cost": 0.000169,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0264",
+      "acc": 1.0,
+      "cost": 0.0001849,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0041",
+      "acc": 1.0,
+      "cost": 0.0004106,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0348",
+      "acc": 1.0,
+      "cost": 0.0002203,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0417",
+      "acc": 1.0,
+      "cost": 0.0001904,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0172",
+      "acc": 1.0,
+      "cost": 0.0006739000000000001,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0853",
+      "acc": 1.0,
+      "cost": 0.0002257,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0745",
+      "acc": 1.0,
+      "cost": 0.0003578,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0920",
+      "acc": 0.0,
+      "cost": 0.0004038,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0229",
+      "acc": 0.0,
+      "cost": 0.0002277,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0473",
+      "acc": 1.0,
+      "cost": 0.0002492,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1008",
+      "acc": 1.0,
+      "cost": 0.00018659999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0284",
+      "acc": 1.0,
+      "cost": 0.0002911,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0594",
+      "acc": 1.0,
+      "cost": 0.000227,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0367",
+      "acc": 1.0,
+      "cost": 0.0003021,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0887",
+      "acc": 1.0,
+      "cost": 0.00024660000000000003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0125",
+      "acc": 1.0,
+      "cost": 0.00022619999999999997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0068",
+      "acc": 1.0,
+      "cost": 0.00017779999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0707",
+      "acc": 1.0,
+      "cost": 0.0002615,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0654",
+      "acc": 1.0,
+      "cost": 0.0001494,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0184",
+      "acc": 1.0,
+      "cost": 0.0001642,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0570",
+      "acc": 1.0,
+      "cost": 0.0004099,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1016",
+      "acc": 1.0,
+      "cost": 0.0001645,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0406",
+      "acc": 1.0,
+      "cost": 0.00025870000000000005,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0645",
+      "acc": 0.0,
+      "cost": 0.0002954,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0008",
+      "acc": 1.0,
+      "cost": 0.00019639999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0873",
+      "acc": 1.0,
+      "cost": 0.0001623,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0424",
+      "acc": 1.0,
+      "cost": 0.0001876,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0054",
+      "acc": 1.0,
+      "cost": 0.000291,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0822",
+      "acc": 1.0,
+      "cost": 0.0001886,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0660",
+      "acc": 1.0,
+      "cost": 0.00020439999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0933",
+      "acc": 1.0,
+      "cost": 0.0004631,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0530",
+      "acc": 1.0,
+      "cost": 0.0005535,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0467",
+      "acc": 1.0,
+      "cost": 0.0002594,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0399",
+      "acc": 1.0,
+      "cost": 0.00027309999999999997,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0291",
+      "acc": 1.0,
+      "cost": 0.0001696,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0010",
+      "acc": 1.0,
+      "cost": 0.000193,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0335",
+      "acc": 1.0,
+      "cost": 0.000225,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0425",
+      "acc": 1.0,
+      "cost": 0.0002507,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0130",
+      "acc": 0.0,
+      "cost": 0.0003734,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0823",
+      "acc": 1.0,
+      "cost": 0.0001886,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0800",
+      "acc": 1.0,
+      "cost": 0.000264,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0925",
+      "acc": 0.0,
+      "cost": 0.000549,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0214",
+      "acc": 1.0,
+      "cost": 0.000193,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0470",
+      "acc": 0.0,
+      "cost": 0.0003682,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1015",
+      "acc": 1.0,
+      "cost": 0.00015989999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0292",
+      "acc": 1.0,
+      "cost": 0.0001696,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0632",
+      "acc": 0.0,
+      "cost": 0.000226,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0298",
+      "acc": 1.0,
+      "cost": 0.0001835,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0913",
+      "acc": 1.0,
+      "cost": 0.0002119,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0085",
+      "acc": 1.0,
+      "cost": 0.0001869,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0832",
+      "acc": 1.0,
+      "cost": 0.0002244,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0661",
+      "acc": 1.0,
+      "cost": 0.00024019999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0998",
+      "acc": 0.0,
+      "cost": 0.00047749999999999995,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0518",
+      "acc": 1.0,
+      "cost": 0.00041739999999999995,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0472",
+      "acc": 0.0,
+      "cost": 0.000356,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0382",
+      "acc": 1.0,
+      "cost": 0.0001466,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0290",
+      "acc": 1.0,
+      "cost": 0.0001783,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0012",
+      "acc": 1.0,
+      "cost": 0.0002127,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0329",
+      "acc": 1.0,
+      "cost": 0.0003278,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0176",
+      "acc": 1.0,
+      "cost": 0.0004464,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0081",
+      "acc": 1.0,
+      "cost": 0.000255,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0740",
+      "acc": 0.0,
+      "cost": 0.0003409,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0675",
+      "acc": 1.0,
+      "cost": 0.00016439999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0195",
+      "acc": 1.0,
+      "cost": 0.0001624,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0516",
+      "acc": 1.0,
+      "cost": 0.0005276,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1012",
+      "acc": 1.0,
+      "cost": 0.0001492,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0390",
+      "acc": 1.0,
+      "cost": 0.00018240000000000002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0643",
+      "acc": 1.0,
+      "cost": 0.00024229999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0029",
+      "acc": 1.0,
+      "cost": 0.0002127,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0867",
+      "acc": 0.0,
+      "cost": 0.00015319999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0113",
+      "acc": 1.0,
+      "cost": 0.0002866,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0858",
+      "acc": 1.0,
+      "cost": 0.0002416,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0811",
+      "acc": 0.0,
+      "cost": 0.0002998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0994",
+      "acc": 1.0,
+      "cost": 0.00034849999999999996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0218",
+      "acc": 1.0,
+      "cost": 0.00024170000000000002,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0481",
+      "acc": 1.0,
+      "cost": 0.0002395,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-1022",
+      "acc": 1.0,
+      "cost": 0.0002311,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0276",
+      "acc": 1.0,
+      "cost": 0.00021199999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0603",
+      "acc": 1.0,
+      "cost": 0.0001996,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0316",
+      "acc": 1.0,
+      "cost": 0.0002059,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0862",
+      "acc": 1.0,
+      "cost": 0.0001501,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0076",
+      "acc": 1.0,
+      "cost": 0.0002253,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0851",
+      "acc": 0.0,
+      "cost": 0.0002285,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0684",
+      "acc": 1.0,
+      "cost": 0.0002003,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0974",
+      "acc": 1.0,
+      "cost": 0.0003548,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0515",
+      "acc": 1.0,
+      "cost": 0.0005498,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0454",
+      "acc": 1.0,
+      "cost": 0.0002804,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0410",
+      "acc": 1.0,
+      "cost": 0.0001859,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0275",
+      "acc": 1.0,
+      "cost": 0.00021229999999999998,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0018",
+      "acc": 1.0,
+      "cost": 0.0002011,
+      "status": "ok",
+      "error": null
+    },
+    {
+      "example_id": "spider-dev-0344",
+      "acc": 1.0,
+      "cost": 0.0003187,
+      "status": "ok",
+      "error": null
+    }
+  ],
+  "cost_per_query": 0.00025608849999999997
+}

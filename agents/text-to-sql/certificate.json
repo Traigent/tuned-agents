@@ -1,0 +1,82 @@
+{
+  "certificate": "Traigent Certified Evaluation",
+  "issuer": "self-issued",
+  "protocol_version": "v1",
+  "subject": "text-to-sql-agent (Spider dev, SQLite, execution-match accuracy)",
+  "issued": "2026-11-27",
+  "expires": "2027-02-27",
+  "expires_early_on": "deprecation or retirement of any listed model id",
+  "model_ids": [
+    "vertex_ai/gemini-3.5-flash-lite",
+    "vertex_ai/gemini-3.5-flash",
+    "vertex_ai/gemini-3.1-pro-preview"
+  ],
+  "sdk": "traigent 0.33.0.dev0 used for the run (requirements.txt pins released 0.33.0)",
+  "n_search": 100,
+  "n_heldout": 200,
+  "seed": 20261127,
+  "preregistration_recorded_utc": "2026-11-27T13:46:08Z",
+  "preregistration_time_note": "pre-registration timestamps for this first run are local file times; later runs pre-register by public commit",
+  "preregistration_original_sha256": {
+    "PREREGISTRATION.md": "9a79d6d62580fa350abbd55247a03df0a25aef9df55f22e1953ae61b39d916c0",
+    "data/heldout.jsonl": "dc5481988bbd4541b6490a87e1fdedde9cb21dfd8333ab541872e4b1403e62c9",
+    "data/manifest.json": "a37e25298da04f77600a55f6156e30a1699fda5f37d1cd745b1e4254a36a2ebf",
+    "spec/text2sql-spider.tvl.yml": "e93c4ead401a79c809f8ae384b4883a25d7b0e03f34acbc538d8aa4db6fd1d17",
+    "results/trials.csv": "064e8223b46c525c4ac9ff577918d113ae1fa3cc4ef0fd977795a016b594cb2f"
+  },
+  "preregistration_original_note": "PREREG.sha256 in this repo is the original file. Two listed files changed before publication, so their published hashes below differ from the original ones: spec/text2sql-spider.tvl.yml (one comment line, a cloud project name removed) and data/manifest.json (the local path of the source file replaced by a relative one). data/heldout.jsonl is not committed; scripts/get_spider.sh rebuilds it and checks it against the original hash (the rebuilt split equals the original). PREREGISTRATION.md and results/trials.csv are byte-identical to the originals. Registration timing is self-attested.",
+  "preregistered_inputs": {
+    "PREREGISTRATION.md": "9a79d6d62580fa350abbd55247a03df0a25aef9df55f22e1953ae61b39d916c0",
+    "spec/text2sql-spider.tvl.yml": "38ba083610b152d011b78d9372b8a58225c942f6ee936be11ebb30748efd4843",
+    "data/manifest.json": "eded21d407624bcd0aefec48bb4b2b1ade1e2127cb176a073b9f3ac02e4ce084",
+    "data/question_ids.json": "494368d30da0df37c5f355bca2400d0f2843c82814d5d41f8468a8895e31dcfe",
+    "data/heldout.jsonl": "dc5481988bbd4541b6490a87e1fdedde9cb21dfd8333ab541872e4b1403e62c9",
+    "results/trials.csv": "064e8223b46c525c4ac9ff577918d113ae1fa3cc4ef0fd977795a016b594cb2f",
+    "results/candidates.json": "61d89ab57140537d0c3e4f9944447d2ca17fdb67c47dfb704fec01641eca6a9c"
+  },
+  "archived_outputs": {
+    "results/heldout_baseline.json": "709b3bd3fc5fcc812a15cef09627dfcc10b5fabad18bc962d341f9aae429149e",
+    "results/heldout_best_other.json": "33dfee4afc42a28839a523e518e39ad18835ce9e1bd5cecff060629eb0bb0eea",
+    "results/heldout_cheap_strong.json": "516651c940ea12259db2e09250c8ee011040859d6787846cb75049345d0ab7ea",
+    "results/heldout_next_strongest.json": "433d581d3c354821934be53aab527ed5ea0be103c05496225c3c8760bea5be79",
+    "results/heldout_summary.json": "e5090b883b78fdad0b282fb0e44bc4e81cbe25d41243510810674138e11ad168",
+    "results/example_rows.jsonl": "4df503272d273bae34fb4be7f754bc5112157bc3aeb27ef29ca992e8ab36f7ce",
+    "results/run_summary.json": "31ebea38094feb5ca204a0320362dedb61e2f3248c434071756d95783bc12c0b"
+  },
+  "result": {
+    "verdict": "no statistically detectable gain among the three held-out alternatives",
+    "ship_choice": "baseline (flash-lite, k=0, direct)",
+    "best_paired_difference_pp": 1.0,
+    "best_paired_difference_ci95_newcombe_pp": [
+      -1.9,
+      4.0
+    ],
+    "best_mcnemar_p": 0.6875,
+    "bonferroni_threshold": 0.0167,
+    "comparisons_passing_bonferroni": 0
+  },
+  "certifies": [
+    "the pre-registered protocol was followed: configs, split, metric and decision rule were written down before any held-out question was scored",
+    "the paired held-out comparison (200 questions, each config against the baseline, 95% intervals, exact McNemar) was computed from the archived outputs",
+    "the archived outputs and hashes in this repo are the ones the numbers come from"
+  ],
+  "does_not_certify": [
+    "agent quality on your data or your schema",
+    "behaviour of any model after the listed model ids change",
+    "that Spider accuracy predicts production accuracy",
+    "provider billing: costs are list-price estimates from token counts"
+  ],
+  "acceptance": {
+    "accepted_by": "Nimrod Busany",
+    "accepted_on": "2026-11-27",
+    "note": "Decision: ship the baseline per the pre-registered rule."
+  },
+  "status": "issued (self-issued)",
+  "protocol_deviations": [
+    "First draft reported Wald paired intervals; pre-registration named Newcombe/Wilson-type or bootstrap and the 0.017 Bonferroni threshold. analyze.py now uses Newcombe method 10 and reports the threshold (corrected; results/heldout_summary.json regenerated from the same per-question outputs)."
+  ],
+  "scorer": "repository SQLite execution-match scorer (agent/sqlutil.py) on a filtered subset of Spider dev; not Spider's official test-suite accuracy",
+  "notes": [
+    "Flash-lite temperatures are requested values; Google documents that this model ignores a custom temperature."
+  ]
+}
