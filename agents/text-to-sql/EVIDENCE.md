@@ -1,17 +1,19 @@
-# Traigent Certified Evaluation
+# Shipped with Evidence: evidence record
 
 **Status: issued (self-issued) · protocol v1 · n=200 held-out · issued 2026-11-27 · expires 2027-02-27**
 
 Accepted by a named person on 2026-11-27 (acceptance block at the end).
 
-Subject: `text-to-sql-agent` (Spider dev, SQLite, execution-match accuracy).
-Machine-readable copy: [certificate.json](certificate.json). Check the hashes with
-`python scripts/verify_certificate.py`.
+Earlier drafts called this record a certificate; it was renamed on 2026-11-27. Content unchanged.
 
-This certificate is issued by the people who ran the evaluation. Nobody outside checked it.
+Subject: `text-to-sql-agent` (Spider dev, SQLite, execution-match accuracy).
+Machine-readable copy: [evidence.json](evidence.json). Check the hashes with
+`python scripts/verify_evidence.py`.
+
+This evidence record is issued by the people who ran the evaluation. Nobody outside checked it.
 It says the protocol was followed and shows the evidence so you can check that yourself.
 
-## What is certified
+## What this record attests
 
 1. **The protocol was followed.** The configurations to score, the split, the metric and the decision
    rule were written down in [PREREGISTRATION.md](PREREGISTRATION.md) before any held-out question
@@ -20,17 +22,17 @@ It says the protocol was followed and shows the evidence so you can check that y
    and each alternative was compared with the baseline question by question: difference with a Newcombe (method 10)
    95% interval, an exact McNemar test, and the Bonferroni threshold 0.05/3 = 0.0167. Where the interval includes 0 the finding is "no detectable gain".
 3. **Archived outputs.** Per-question correctness for every scored configuration, the search trials and the
-   per-example search rows are in `results/`, with hashes in `certificate.json`.
-4. **Human acceptance** (block at the end). The certificate is not complete until a named person fills it in.
+   per-example search rows are in `results/`, with hashes in `evidence.json`.
+4. **Human acceptance** (block at the end). The record is not complete until a named person fills it in.
 
-## What is NOT certified
+## What this record does NOT attest
 
 - Agent quality on your data, your schema or your questions.
 - The behaviour of any model after the listed model ids change.
 - That Spider accuracy predicts accuracy in production.
 - Provider billing. Costs are list prices applied to token counts, not invoices.
 
-## Result being certified
+## Result recorded
 
 No statistically detectable gain among the three held-out alternatives (two scored 174/200 against the baseline's 172/200). The best paired difference was +1.0 pp (Newcombe 95% CI -1.9 to +4.0,
 McNemar p=0.69). No comparison passes the Bonferroni threshold of 0.0167 (smallest p is 0.66). By the pre-registered rule the ship choice is the baseline: `gemini-3.5-flash-lite`,
@@ -61,7 +63,7 @@ Two listed files were edited before publication, so their published hashes diffe
 (the local path of the source file replaced by a relative one). `data/heldout.jsonl` is not committed
 (it is Spider data); `scripts/get_spider.sh` rebuilds it from the committed ids and checks it against the
 original hash `dc548198...`. `PREREGISTRATION.md` and `results/trials.csv` are byte-identical to the originals.
-Hashes of the published files are in `certificate.json`.
+Hashes of the published files are in `evidence.json`.
 
 Further disclosures:
 
@@ -74,7 +76,7 @@ Further disclosures:
 ## Validity
 
 Issued 2026-11-27. Valid until 2027-02-27, or earlier if any listed model id is deprecated or retired.
-After that the certificate is marked stale and kept, not deleted.
+After that the record is marked stale and kept, not deleted.
 
 ## Acceptance
 

@@ -1,16 +1,16 @@
 # Tuned Agents
 
-Useful AI agents, tuned with Traigent and shipped with a certified evaluation: scorecard, TVL spec, failures, and a one-command rerun.
+Useful AI agents, tuned with Traigent and every agent ships with its evidence: scorecard, TVL spec, failures, and a one-command rerun.
 
-## What the certificate means
+## What the evidence record means
 
-Each agent carries a Traigent Certified Evaluation. It is self-issued. It certifies two things: the pre-registered evaluation protocol was followed (hashes of the pre-registration, data splits and archived outputs are checked by a script), and a named human accepted the result. It does not certify quality on your data, and it expires (each certificate states its date).
+Each agent is Shipped with Evidence: an evidence record. It is self-issued. It attests two things: the pre-registered evaluation protocol was followed (hashes of the pre-registration, data splits and archived outputs are checked by a script), and a named human accepted the result. It does not attest quality on your data, and it expires (each evidence record states its date).
 
 ## Agents
 
-| Agent | Task | Verdict | Certificate badge | Link |
+| Agent | Task | Verdict | Evidence | Link |
 |-------|------|---------|-------------------|------|
-| text-to-sql | Natural-language question to SQLite query, scored by execution match on Spider dev | Cheapest baseline kept: no statistically detectable gain from 3 tuned alternatives on 200 held-out Spider questions; others cost up to ~8x more | [![Traigent Certified Evaluation](https://img.shields.io/badge/Traigent%20Certified%20Evaluation-self--issued%20%C2%B7%20n%3D200%20%C2%B7%202026--11%20%C2%B7%20exp%202027--02-blue)](agents/text-to-sql/CERTIFICATE.md) | [agents/text-to-sql](agents/text-to-sql) |
+| text-to-sql | Natural-language question to SQLite query, scored by execution match on Spider dev | Cheapest baseline kept: no statistically detectable gain from 3 tuned alternatives on 200 held-out Spider questions; others cost up to ~8x more | [![Shipped with Evidence](https://img.shields.io/badge/Shipped%20with%20Evidence-n%3D200%20held--out%20%C2%B7%202026--11%20%C2%B7%20exp%202027--02-blue)](agents/text-to-sql/EVIDENCE.md) | [agents/text-to-sql](agents/text-to-sql) |
 
 Every agent lives in its own folder under `agents/` and runs from there: `cd agents/text-to-sql`, then follow its README.
 
@@ -23,7 +23,7 @@ An agent is listed only if it meets all of these:
 - A public benchmark, so anyone can obtain the same data.
 - Exact model ids, spend, archived raw outputs, and a rerun path (mock mode first, spend guarded).
 - A named human who accepted the result.
-- An expiry date on the certificate.
+- An expiry date on the evidence record.
 - Real failures shown, not only the scorecard.
 
 ## Built with Traigent

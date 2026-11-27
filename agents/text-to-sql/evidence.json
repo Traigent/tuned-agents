@@ -1,5 +1,5 @@
 {
-  "certificate": "Traigent Certified Evaluation",
+  "evidence_record": "Shipped with Evidence",
   "issuer": "self-issued",
   "protocol_version": "v1",
   "subject": "text-to-sql-agent (Spider dev, SQLite, execution-match accuracy)",
@@ -55,12 +55,12 @@
     "bonferroni_threshold": 0.0167,
     "comparisons_passing_bonferroni": 0
   },
-  "certifies": [
+  "attests": [
     "the pre-registered protocol was followed: configs, split, metric and decision rule were written down before any held-out question was scored",
     "the paired held-out comparison (200 questions, each config against the baseline, 95% intervals, exact McNemar) was computed from the archived outputs",
     "the archived outputs and hashes in this repo are the ones the numbers come from"
   ],
-  "does_not_certify": [
+  "does_not_attest": [
     "agent quality on your data or your schema",
     "behaviour of any model after the listed model ids change",
     "that Spider accuracy predicts production accuracy",
